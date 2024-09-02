@@ -1,0 +1,16 @@
+{
+  "name": "cypress-base-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "cypress": "^13.13.0",
+    "cypress-real-events": "^1.13.0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
