@@ -23,4 +23,5 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
-import "cypress-real-events";
+import "cypress-real-events/support";
+/// <reference types="cypress-xpath" />
