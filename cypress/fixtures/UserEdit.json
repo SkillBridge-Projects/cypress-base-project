@@ -1,0 +1,5 @@
+{
+   "username":"test@mail.com",
+   "password":"test",
+   "expected":"User test@mail.com logged in sucessfully"
+}

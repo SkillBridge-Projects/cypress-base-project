@@ -25,3 +25,19 @@
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 import "cypress-real-events/support";
 /// <reference types="cypress-xpath" />
+
+Cypress.Commands.add('login', (username, password) => {
+    cy.visit('http://localhost:8080/authenticate'); // Adjust the URL to your login page
+  
+    cy.get('input[name="email"]').type(username);
+    cy.get('input[name="password"]').type(password);
+    cy.get('button[type="submit"]').click();
+  
+    // Verify login was successful
+    cy.xpath("//div[@class='sc-hqyNC iwIKiC']//div")
+      .should("be.visible")
+      .and("contain", "User test@mail.com logged in sucessfully"); // Replace with actual expected text
+      cy.wait(1000)
+      cy.xpath("//div[@class='sc-hqyNC iwIKiC']").click();
+      cy.wait(1000);
+  });
